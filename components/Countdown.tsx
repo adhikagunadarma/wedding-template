@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
-const TARGET_DATE = new Date("2025-06-01T15:00:00"); // <- defined outside
+const TARGET_DATE = new Date("2026-06-01T15:00:00"); // <- defined outside
 
 interface TimeLeft {
   days: number;
@@ -41,6 +42,13 @@ const Countdown = () => {
 
   return (
     <section className="py-16 bg-[#fefbf6] text-center">
+      <Image
+        src="/images/ring2.png"
+        alt="Counting the Days Illustration"
+        width={300}
+        height={200}
+        className="mx-auto mb-6"
+      />
       <h2 className="text-3xl md:text-4xl font-[cinzel] text-[#44322a] mb-6">
         Counting the Days
       </h2>

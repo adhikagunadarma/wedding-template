@@ -11,9 +11,9 @@ const Hero = () => (
       The Wedding of
     </h1>
     <h2 className="text-5xl md:text-7xl font-[cinzel] text-[#44322a] mb-6">
-      Alex & Alice
+      Lizzy & Arya
     </h2>
-    <p className="text-[#7a6c5d] text-sm md:text-base mb-1">Sunday, 01 June 2025</p>
+    <p className="text-[#7a6c5d] text-sm md:text-base mb-1">Sunday, 01 June 2026</p>
     <p className="text-[#7a6c5d] text-sm md:text-base">Jakarta, Indonesia</p>
 
     <Leaves />

@@ -171,3 +171,14 @@
 .animate-fall3 {
   animation-name: fall3;
 }
+
+@font-face {
+  font-family: "triplecharm";
+  src: url("/fonts/TripleCharm-Script.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-script {
+  font-family: 'triplecharm', cursive;
+}
