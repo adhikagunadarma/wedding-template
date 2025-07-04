@@ -21,7 +21,9 @@ export default function WeddingGift() {
 
   return (
     <section id="wedding-gift" className="py-16 px-6 bg-gray-100 text-center">
-      <h2 className="text-3xl font-bold mb-6">Wedding Gift</h2>
+      <h2 className="font-script text-3xl sm:text-4xl md:text-5xl text-[#44322a] mb-12">
+        Wedding Gift
+      </h2>
       <p className="mb-4 max-w-lg mx-auto text-gray-700">
         Your presence is the most meaningful gift, but if you wish to bless us with a token of love, here's our bank information:
       </p>
