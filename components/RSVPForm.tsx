@@ -17,7 +17,7 @@ const RSVPForm = () => {
       <div className="cursor-pointer inline-block" onClick={() => setShowForm(true)}>
         <div className="w-48 sm:w-64 md:w-72 lg:w-80 mx-auto transition-transform hover:scale-105 duration-300">
           <Image
-            src="/images/envelope.png" // Update with your actual image path
+            src="/images/Envelope.png" // Update with your actual image path
             alt="Open RSVP Form"
             width={500}
             height={400}
