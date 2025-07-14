@@ -6,7 +6,7 @@ const Story = () => {
       <div className="flex flex-col items-center max-w-5xl mx-auto">
         {/* Image */}
         <img
-          src="/images/image-5.jpg"
+          src="/images/image-5.JPG"
           alt="Our Story Decoration"
           className="w-full object-cover max-h-[500px] md:max-h-[600px] rounded-md"
         />
