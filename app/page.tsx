@@ -11,6 +11,7 @@ import WeddingGift from "@/components/WeddingGift"
 import Footer from "@/components/Footer";
 import AudioPlayer from "@/components/AudioPlayer";
 import GuestNameProvider from "@/components/GuestNameProvider";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -21,7 +22,9 @@ export default function Home() {
 
       {/* Always stacked layout */}
 <div className="w-full xl:max-w-[1024px] xl:mx-auto xl:px-4">
-        <GuestNameProvider /> {/* 👈 dynamic guest name from URL */}
+        <Suspense fallback={null}>
+          <GuestNameProvider />
+        </Suspense>
         <Hero />
         <Countdown />
         <Couple />
