@@ -7,20 +7,21 @@ const AudioPlayer = () => {
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const togglePlay = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
+const togglePlay = () => {
+  const audio = audioRef.current;
+  if (!audio) return;
 
-    if (playing) {
-      audio.pause();
-    } else {
-      audio.play().catch((e) => {
-        console.warn("Autoplay blocked:", e);
-      });
-    }
+  if (audio.paused) {
+    audio.play().catch((e) => {
+      console.warn("Autoplay blocked:", e);
+    });
+  } else {
+    audio.pause();
+  }
 
-    setPlaying(!playing);
-  };
+  setPlaying((prev) => !prev); // ✅ fix here
+};
+
 
   useEffect(() => {
     const audio = audioRef.current;

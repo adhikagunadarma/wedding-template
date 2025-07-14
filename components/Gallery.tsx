@@ -103,22 +103,22 @@ const Gallery = () => {
             <X size={36} />
           </button>
 
+          <img
+            src={`/images/image-${allImages[currentIndex]}.JPG`}
+            alt="Large view"
+            className="relative z-20 max-w-[90%] max-h-[90%] rounded-xl shadow-lg transition duration-300 ease-in-out transform scale-95 opacity-0 animate-fadeIn"
+          />
+
           <button
             onClick={prevImage}
-            className="absolute left-4 text-white hover:text-gray-300"
+            className="absolute left-8 z-30 text-white hover:text-gray-300"
           >
             <ChevronLeft size={40} />
           </button>
 
-          <img
-            src={`/images/image-${allImages[currentIndex]}.JPG`}
-            alt="Large view"
-            className="max-w-[90%] max-h-[90%] rounded-xl shadow-lg transition duration-300 ease-in-out transform scale-95 opacity-0 animate-fadeIn"
-          />
-
           <button
             onClick={nextImage}
-            className="absolute right-4 text-white hover:text-gray-300"
+            className="absolute right-8 z-30 text-white hover:text-gray-300"
           >
             <ChevronRight size={40} />
           </button>
