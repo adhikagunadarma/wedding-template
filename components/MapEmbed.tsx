@@ -4,7 +4,7 @@
 const MapEmbed = () => {
   return (
     <section className="py-16 bg-[#fefbf6] px-6 text-center">
-      <h2 className="font-script text-3xl sm:text-4xl md:text-5xl text-[#44322a] mb-12">
+      <h2 className="font-script text-5xl sm:text-6xl md:text-7xl text-[#44322a] mb-12">
         Find Us Here
       </h2>
       <div className="w-full max-w-3xl mx-auto aspect-video rounded-lg overflow-hidden shadow-lg">

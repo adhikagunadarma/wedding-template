@@ -21,7 +21,7 @@ export default function WeddingGift() {
 
   return (
     <section id="wedding-gift" className="py-16 px-6 bg-gray-100 text-center">
-      <h2 className="font-script text-3xl sm:text-4xl md:text-5xl text-[#44322a] mb-12">
+      <h2 className="font-script text-5xl sm:text-6xl md:text-7xl text-[#44322a] mb-12">
         Wedding Gift
       </h2>
       <p className="mb-4 max-w-lg mx-auto text-gray-700">

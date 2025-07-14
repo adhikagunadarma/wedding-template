@@ -43,7 +43,7 @@ const SplashModal = ({ guestName = "Guest" }: { guestName?: string }) => {
             alt="Wedding background"
             className="w-full h-auto object-cover"
           />
-          <div className="px-6 py-8 bg-[#fefbf6]/80">
+          <div className="px-6 py-8 bg-[#fefbf6]">
             <h1 className="text-sm sm:text-base md:text-lg font-light tracking-widest text-[#9f9389] uppercase mb-2">
               The Wedding of
             </h1>

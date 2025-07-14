@@ -34,7 +34,7 @@ const Gallery = () => {
   return (
     <section className="py-16 bg-[#fefbf6]">
       <div className="max-w-screen-xl mx-auto px-4 text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-script text-[#44322a] mb-12">
+        <h2 className="text-5xl sm:text-6xl md:text-7xl font-script text-[#44322a] mb-12">
           Our Gallery
         </h2>
 
@@ -85,7 +85,7 @@ const Gallery = () => {
             <h2 className="text-black font-[cinzel] font-script text-6xl sm:text-7xl md:text-8xl leading-none">
               Love is in
             </h2>
-            <h2 className="text-black font-[cinzel] font-script text-5xl sm:text-6xl md:text-7xl leading-none mt-2 translate-x-5 sm:translate-x-8 md:translate-x-10">
+            <h2 className="text-black font-[cinzel] font-script text-6xl sm:text-7xl md:text-8xl leading-none mt-2 translate-x-5 sm:translate-x-8 md:translate-x-10">
               The air
             </h2>
           </div>

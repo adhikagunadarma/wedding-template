@@ -8,7 +8,7 @@ const RSVPForm = () => {
 
   return (
     <section className="py-16 bg-[#fefbf6] text-center px-6 relative">
-      <h2 className="font-script text-3xl sm:text-4xl md:text-5xl text-[#44322a] mb-12">
+      <h2 className="font-script text-5xl sm:text-6xl md:text-7xl text-[#44322a] mb-12">
         RSVP
       </h2>
       <p className="text-[#7a6c5d] mb-8 font-light">Please let us know if you can join us</p>

@@ -31,7 +31,7 @@ const Story = () => {
       </div>
 
       {/* Story paragraph */}
-      <p className="max-w-2xl mx-auto text-gray-700 font-[cinzel] leading-relaxed text-base sm:text-lg md:text-xl mt-10 text-center">
+      <p className="max-w-2xl mx-auto text-gray-700 font-light leading-relaxed text-base sm:text-lg md:text-xl mt-10 text-center">
         It all began on a sunny afternoon when Axel and Alice crossed paths at a quaint coffee shop. From shared laughter over latte art to twilight strolls in Jakarta’s old town, their bond grew stronger each day. Now, they invite you to celebrate the next chapter of their fairy tale.
       </p>
 

@@ -49,7 +49,7 @@ const Countdown = () => {
         height={200}
         className="mx-auto mb-6"
       />
-      <h2 className="text-3xl md:text-4xl font-[cinzel] text-[#44322a] mb-6">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-[cinzel] text-[#44322a] mb-6">
         Counting the Days
       </h2>
       <p className="text-[#9f9389] mb-8 font-light">Until we say "I do"</p>

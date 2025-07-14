@@ -46,7 +46,7 @@ const WeddingWishes = () => {
   return (
     <section className="py-16 px-6 bg-[#fefbf6] text-center">
       {/* Title */}
-      <h2 className="font-script text-3xl sm:text-4xl md:text-5xl text-[#44322a] mb-10">
+      <h2 className="font-script text-5xl sm:text-6xl md:text-7xl text-[#44322a] mb-10">
         Wedding Wishes
       </h2>
 
