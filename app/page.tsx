@@ -10,32 +10,31 @@ import WeddingWishes from "@/components/WeddingWishes"
 import WeddingGift from "@/components/WeddingGift"
 import Footer from "@/components/Footer";
 import AudioPlayer from "@/components/AudioPlayer";
+import SplashModal from "@/components/SplashModal";
 
 export default function Home() {
   return (
 
     
-    <main className="flex flex-col md:flex-row">
-    <AudioPlayer />
-    {/* Left Sticky Hero */}
-    <div className="hidden md:block md:w-1/2 sticky top-0 h-screen">
-      <Hero />
-    </div>
+    <main className="flex flex-col">
+      <AudioPlayer />
 
-    {/* Right Scrollable Content */}
-    <div className="w-full md:w-1/2">
-    <Countdown />
-      <Couple />
-      <Story />
-      <EventDetails />
-      <MapEmbed />
-      <Gallery />
-      <RSVPForm />
-      <WeddingWishes />
-      <WeddingGift />
-      <Footer />
-    </div>
-  </main>
+      {/* Always stacked layout */}
+<div className="w-full xl:max-w-[1024px] xl:mx-auto xl:px-4">
+        <SplashModal guestName="Adhika" />
+        <Hero />
+        <Countdown />
+        <Couple />
+        <Story />
+        <EventDetails />
+        <MapEmbed />
+        <Gallery />
+        <RSVPForm />
+        <WeddingWishes />
+        <WeddingGift />
+        <Footer />
+      </div>
+    </main>
   );
 }
 
