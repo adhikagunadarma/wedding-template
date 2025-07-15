@@ -17,7 +17,11 @@ jobs:
         run: npm install
 
       - name: Build Next.js Static Site
-        run: npm run build
+        run: npm run deploy
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+
 
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
