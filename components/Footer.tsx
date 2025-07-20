@@ -2,7 +2,7 @@
 "use client";
 
 const Footer = () => (
-  <footer className="py-12 bg-[#fefbf6] text-center px-6 ">
+  <footer className="py-12 text-center px-6 ">
     <img
       src="/images/footer.png"
       alt="Thank you for celebrating with us"

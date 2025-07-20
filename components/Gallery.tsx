@@ -3,6 +3,11 @@
 import React, { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
+// update gallery kek yg di kasih pepe, 2 fotoroll di tempelin
+// video prewed (optional)
+// animasi
+// foto asli
+
 const Gallery = () => {
   const filmImages = [1, 2, 3, 4, 5];
   const staticImages = [6, 7, 8];

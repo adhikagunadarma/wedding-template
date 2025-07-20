@@ -1,5 +1,6 @@
 "use client";
 
+
 import { useEffect, useState } from "react";
 
 const SplashModal = ({ guestName = "Guest" }: { guestName?: string }) => {
@@ -43,23 +44,23 @@ const SplashModal = ({ guestName = "Guest" }: { guestName?: string }) => {
             alt="Wedding background"
             className="w-full h-auto object-cover"
           />
-          <div className="px-6 py-8 bg-[#fefbf6]">
-            <h1 className="text-sm sm:text-base md:text-lg font-light tracking-widest text-[#9f9389] uppercase mb-2">
-              The Wedding of
-            </h1>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-script text-[#44322a] mb-6">
-              Lizzy & Arya
-            </h2>
-            <p className="text-[#44322a] text-sm sm:text-base mb-4">
-              Dear <span className="font-semibold">{guestName}</span>,
-            </p>
-            <button
-              onClick={handleOpenInvitation}
-              className="px-6 py-3 bg-[#44322a] text-white rounded-full shadow-md hover:bg-[#2f231c] transition"
-            >
-              Open Invitation
-            </button>
-          </div>
+        <div className="px-6 -mt-20 pb-8 bg-[#fefbf6] relative z-10">
+          <h1 className="text-sm sm:text-base md:text-lg font-light tracking-widest text-[#9f9389] uppercase mb-2">
+            The Wedding of
+          </h1>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-script text-[#44322a] mb-6">
+            Lizzy & Arya
+          </h2>
+          <p className="text-[#44322a] text-sm sm:text-base mb-4">
+            Dear <span className="font-semibold">{guestName}</span>,
+          </p>
+          <button
+            onClick={handleOpenInvitation}
+            className="px-6 py-3 bg-[#44322a] text-white rounded-full shadow-md hover:bg-[#2f231c] transition"
+          >
+            Open Invitation
+          </button>
+        </div>
         </div>
       </div>
     </div>

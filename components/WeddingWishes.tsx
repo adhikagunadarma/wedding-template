@@ -4,7 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/lib/supabase"; // 👈 import Supabase client
+import { supabase } from "@/lib/supabase";
+import { motion } from "framer-motion";
 
 interface Wish {
   name: string;
@@ -19,7 +20,6 @@ const WeddingWishes = () => {
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // 👇 Fetch wishes from Supabase
   useEffect(() => {
     const fetchWishes = async () => {
       const { data, error } = await supabase
@@ -38,7 +38,6 @@ const WeddingWishes = () => {
     fetchWishes();
   }, []);
 
-  // 👇 Scroll to latest wish
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -55,7 +54,10 @@ const WeddingWishes = () => {
       message: message.trim(),
     };
 
-    const { error } = await supabase.from("arya_lizzy_wish_wedding").insert(newWish);
+    const { error } = await supabase
+      .from("arya_lizzy_wish_wedding")
+      .insert(newWish);
+
     if (error) {
       console.error("Failed to submit wish:", error.message);
       setLoading(false);
@@ -69,18 +71,44 @@ const WeddingWishes = () => {
   };
 
   return (
-    <section className="py-16 px-6 bg-[#fefbf6] text-center">
-      <h2 className="font-script text-5xl sm:text-6xl md:text-7xl text-[#44322a] mb-10">
+    <motion.section
+      className="py-16 px-6 bg-[#fefbf6] text-center"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ staggerChildren: 0.2 }}
+      variants={{
+        hidden: {},
+        visible: {},
+      }}
+    >
+      <motion.h2
+        className="font-script text-5xl sm:text-6xl md:text-7xl text-[#44322a] mb-10"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         Wedding Wishes
-      </h2>
+      </motion.h2>
 
-      <p className="text-[#9f9389] mb-8 font-light max-w-xl mx-auto">
+      <motion.p
+        className="text-[#9f9389] mb-8 font-light max-w-xl mx-auto"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         Leave your heartfelt wishes for the couple below ✨
-      </p>
+      </motion.p>
 
-      <form
+      <motion.form
         onSubmit={handleSubmit}
         className="max-w-xl mx-auto space-y-4 mb-10 text-left"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
       >
         <Input
           type="text"
@@ -102,22 +130,32 @@ const WeddingWishes = () => {
         >
           {loading ? "Sending..." : "Send Wish"}
         </Button>
-      </form>
+      </motion.form>
 
-      <div className="max-w-3xl mx-auto mb-10">
+      <motion.div
+        className="max-w-3xl mx-auto mb-10"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div
           ref={scrollRef}
           className="w-full max-h-[340px] overflow-y-auto space-y-6 bg-white/90 px-6 py-6 rounded-xl text-left border border-[#f1e8e1] backdrop-blur-sm shadow-md"
         >
           {wishes.map((wish, idx) => (
             <div key={idx} className="border-b border-[#f1e8e1] pb-4">
-              <p className="text-lg font-semibold text-[#44322a] mb-1">{wish.name}</p>
-              <p className="text-[#7a6c5d] whitespace-pre-line text-base">{wish.message}</p>
+              <p className="text-lg font-semibold text-[#44322a] mb-1">
+                {wish.name}
+              </p>
+              <p className="text-[#7a6c5d] whitespace-pre-line text-base">
+                {wish.message}
+              </p>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
