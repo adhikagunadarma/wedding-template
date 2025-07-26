@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const repoName = 'wedding-page';
+const repoName = 'wedding-template';
 const isGithubPages = process.env.DEPLOY_TARGET === 'gh-pages';
 
 const nextConfig = {
