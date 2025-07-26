@@ -10,9 +10,7 @@ const nextConfig = {
   },
   basePath: isGithubPages ? `/${repoName}` : '',
   assetPrefix: isGithubPages ? `/${repoName}/` : '',
-
-  // (optional) Add other configs here, like trailingSlash if needed:
-  // trailingSlash: true,
+  trailingSlash: true,
 };
 
 export default nextConfig;
