@@ -19,7 +19,7 @@ jobs:
       - name: Build static site
         run: |
           npm run build
-          gh-pages -d out
+          npm run deploy-gh
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
