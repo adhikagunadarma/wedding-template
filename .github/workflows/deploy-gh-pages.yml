@@ -17,7 +17,7 @@ jobs:
         run: npm install
 
       - name: Build static site
-        run: npm run deploy
+        run: npm run build
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
@@ -26,7 +26,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
-          external_repository: adhikagunadarma/wedding-template
-          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
