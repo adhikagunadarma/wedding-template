@@ -9,7 +9,7 @@
     "lint": "next lint",
     "export": "next export",
     "deploy": "next build && next export",
-    "deploy-gh" : "gh-pages -d out"
+    "deploy-gh": "gh-pages -d out"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
@@ -31,6 +31,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
