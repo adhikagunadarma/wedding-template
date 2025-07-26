@@ -8,8 +8,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' && isGithubPages ? `/${repoName}` : '',
-  assetPrefix: process.env.NODE_ENV === 'production' && isGithubPages ? `/${repoName}/` : '',
+  basePath: isGithubPages ? `/${repoName}` : '',
+  assetPrefix: isGithubPages ? `/${repoName}/` : '',
 
   // (optional) Add other configs here, like trailingSlash if needed:
   // trailingSlash: true,
