@@ -1,5 +1,5 @@
-// const repoName = 'wedding-template';
-// const isGithubPages = process.env.DEPLOY_TARGET === 'gh-pages';
+const repoName = 'wedding-template';
+const isGithubPages = process.env.DEPLOY_TARGET === 'gh-pages';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,8 +8,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/wedding-template',
-  assetPrefix: '/wedding-template/',
+  basePath: isGithubPages ? `/${repoName}` : '',
+  assetPrefix: isGithubPages ? `/${repoName}/` : '',
 };
 
 export default nextConfig;
