@@ -16,7 +16,6 @@ import { Suspense } from "react";
 export default function Home() {
   return (
 
-    //todo pindahin ke github pages
     // cari domain buy brp
     // kalo maintain brp 
     
