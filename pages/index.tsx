@@ -1,3 +1,4 @@
+// pages/index.tsx
 import Hero from "@/components/Hero";
 import Countdown from "@/components/Countdown";
 import Couple from "@/components/Couple";
@@ -6,24 +7,16 @@ import EventDetails from "@/components/EventDetails";
 import MapEmbed from "@/components/MapEmbed";
 import Gallery from "@/components/Gallery";
 import RSVPForm from "@/components/RSVPForm";
-import WeddingWishes from "@/components/WeddingWishes"
-import WeddingGift from "@/components/WeddingGift"
+import WeddingWishes from "@/components/WeddingWishes";
+import WeddingGift from "@/components/WeddingGift";
 import Footer from "@/components/Footer";
-import AudioPlayer from "@/components/AudioPlayer";
 import GuestNameProvider from "@/components/GuestNameProvider";
 import { Suspense } from "react";
 
 export default function Home() {
   return (
-
-    // cari domain buy brp
-    // kalo maintain brp 
-    
     <main className="flex flex-col">
-      <AudioPlayer />
-
-      {/* Always stacked layout */}
-<div className="w-full xl:max-w-[1024px] xl:mx-auto xl:px-4">
+      <div className="w-full xl:max-w-[1024px] xl:mx-auto xl:px-4">
         <Suspense fallback={null}>
           <GuestNameProvider />
         </Suspense>
@@ -42,4 +35,3 @@ export default function Home() {
     </main>
   );
 }
-
