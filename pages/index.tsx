@@ -13,6 +13,11 @@ import Footer from "@/components/Footer";
 import GuestNameProvider from "@/components/GuestNameProvider";
 import { Suspense } from "react";
 
+
+// github pages masih missing assets
+// deploy github pages lebih murah cuma butuh domain (200-300k probs) tny chat gpt
+// kalo ke S3 kudu bayar nama domain sama r53 jg
+
 export default function Home() {
   return (
     <main className="flex flex-col">
