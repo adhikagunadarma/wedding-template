@@ -2,6 +2,7 @@
 
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const SplashModal = ({ guestName = "Guest" }: { guestName?: string }) => {
   const [showSplash, setShowSplash] = useState(true);
@@ -39,9 +40,11 @@ const SplashModal = ({ guestName = "Guest" }: { guestName?: string }) => {
       {/* 📩 Modal */}
       <div className="relative z-10 flex items-center justify-center h-full px-4">
         <div className="bg-[#fefbf6] rounded-2xl shadow-2xl max-w-xl w-full overflow-hidden text-center border border-[#e6e0d6]">
-          <img
-            src="wedding-template/images/home.gif"
+          <Image
+            src="/images/home.gif"
             alt="Wedding background"
+            width={800} // set your actual width
+            height={400} // set your actual height
             className="w-full h-auto object-cover"
           />
         <div className="px-6 -mt-20 pb-8 bg-[#fefbf6] relative z-10">
