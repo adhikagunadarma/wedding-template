@@ -40,7 +40,7 @@ const SplashModal = ({ guestName = "Guest" }: { guestName?: string }) => {
       <div className="relative z-10 flex items-center justify-center h-full px-4">
         <div className="bg-[#fefbf6] rounded-2xl shadow-2xl max-w-xl w-full overflow-hidden text-center border border-[#e6e0d6]">
           <img
-            src="/images/home.gif"
+            src="wedding-template/images/home.gif"
             alt="Wedding background"
             className="w-full h-auto object-cover"
           />
