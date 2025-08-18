@@ -17,7 +17,9 @@ jobs:
         run: npm install
 
       - name: Build static site
-        run: DEPLOY_TARGET=gh-pages npm run build && cp out/index.html out/404.html
+        run: |
+          DEPLOY_TARGET=gh-pages npm run build
+          cp out/index.html out/404.html
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
