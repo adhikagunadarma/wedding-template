@@ -1,12 +1,15 @@
 "use client";
 
-
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const SplashModal = ({ guestName = "Guest" }: { guestName?: string }) => {
   const [showSplash, setShowSplash] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 
   useEffect(() => {
     document.body.style.overflow = showSplash ? "hidden" : "auto";
@@ -41,7 +44,7 @@ const SplashModal = ({ guestName = "Guest" }: { guestName?: string }) => {
       <div className="relative z-10 flex items-center justify-center h-full px-4">
         <div className="bg-[#fefbf6] rounded-2xl shadow-2xl max-w-xl w-full overflow-hidden text-center border border-[#e6e0d6]">
           <Image
-            src="/images/home.gif"
+            src={`${basePath}/images/home.gif`}
             alt="Wedding background"
             width={800} // set your actual width
             height={400} // set your actual height
