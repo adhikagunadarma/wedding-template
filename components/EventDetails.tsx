@@ -12,6 +12,8 @@ const fadeUp = {
 // foto kecilin gereja nunggu pepe+ foto dress code
 
 const EventDetails = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <section
       className="pt-24 pb-16 bg-white text-center px-6 bg-cover bg-center"
@@ -49,7 +51,7 @@ const EventDetails = () => {
         >
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
-              src="/images/church.png"
+              src={`${basePath}/images/church.png`}
               alt="Holy Matrimony"
               width={450}
               height={250}
@@ -76,7 +78,7 @@ const EventDetails = () => {
           </div>
           <div className="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
             <Image
-              src="/images/party.png"
+              src={`${basePath}/images/party.png`}
               alt="Reception"
               width={450}
               height={250}
@@ -93,7 +95,7 @@ const EventDetails = () => {
         >
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
-              src="/images/dinner.png"
+              src={`${basePath}/images/dinner.png`}
               alt="Dress Code"
               width={450}
               height={250}

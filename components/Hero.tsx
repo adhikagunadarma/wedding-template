@@ -1,11 +1,16 @@
 "use client";
+import Image from "next/image";
 
-const Hero = () => (
+const Hero = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  return(
   <section className="w-full relative overflow-hidden">
     {/* 🎞️ Responsive GIF */}
-    <img
-      src="/images/home.gif"
+    <Image
+      src={`${basePath}/images/home.gif`}
       alt="Wedding background"
+      width={800} // set your actual width
+      height={400} // set your actual height
       className="w-full h-auto object-cover block"
     />
 
@@ -19,6 +24,6 @@ const Hero = () => (
       </h2>
     </div>
   </section>
-);
+)};
 
 export default Hero;

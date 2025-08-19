@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 // image gif yg baru
 
 const Couple = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <section className="py-16 px-6 bg-white text-center">
       {/* 💍 Section Title: Fade in */}
@@ -44,7 +46,7 @@ const Couple = () => {
         >
           <div className="w-[280px] h-[400px] relative">
             <Image
-              src="/images/bride.png"
+              src={`${basePath}/images/bride.png`}
               alt="Bride"
               layout="fill"
               objectFit="contain"
@@ -67,7 +69,7 @@ const Couple = () => {
         >
           <div className="w-[280px] h-[400px] relative">
             <Image
-              src="/images/groom.png"
+              src={`${basePath}/images/groom.png`}
               alt="Groom"
               layout="fill"
               objectFit="contain"

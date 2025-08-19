@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 const TARGET_DATE = new Date("2026-06-01T15:00:00"); // <- defined outside
 
+
 // image gif buat cincin sama tanggal nikah
 
 interface TimeLeft {
@@ -31,6 +32,7 @@ const calculateTimeLeft = (targetDate: Date): TimeLeft => {
 };
 
 const Countdown = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
   useEffect(() => {
@@ -53,7 +55,7 @@ const Countdown = () => {
         transition={{ duration: 0.7 }}
       >
         <Image
-          src="/images/ring2.png"
+          src={`${basePath}/images/ring2.png`}
           alt="Counting the Days Illustration"
           width={300}
           height={200}

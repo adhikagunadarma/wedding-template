@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const RSVPForm = () => {
   const [showForm, setShowForm] = useState(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   return (
     <motion.section
@@ -50,7 +51,7 @@ const RSVPForm = () => {
       >
         <div className="w-48 sm:w-64 md:w-72 lg:w-80 mx-auto transition-transform hover:scale-120 duration-300">
           <Image
-            src="/images/Envelope.png"
+            src={`${basePath}/images/Envelope.png`}
             alt="Open RSVP Form"
             width={500}
             height={400}

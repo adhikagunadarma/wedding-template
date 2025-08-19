@@ -3,8 +3,12 @@
 import React, { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
 
 const Gallery = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   const filmImages = [1, 2, 3, 4, 5, 6, 7, 8];
   const leftColumn = filmImages.filter((_, idx) => idx % 2 === 0);
   const rightColumn = filmImages.filter((_, idx) => idx % 2 !== 0);
@@ -76,15 +80,21 @@ const Gallery = () => {
                   }`}
                 >
                   {/* Filmroll frame */}
-                  <img
-                    src="/images/filmroll.png"
-                    alt="Filmroll frame"
-                    className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+
+                <Image
+                  src={`${basePath}/images/filmroll.png`}
+                  alt="filmroll"
+                  width={450}
+                  height={250}
+                  className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
                   />
+
                   {/* Actual photo */}
-                  <img
-                    src={`/images/image-${i}.JPG`}
+                  <Image
+                    src={`${basePath}/images/image-${i}.JPG`}
                     alt={`Image ${i}`}
+                    width={450}
+                    height={250}
                     className="relative z-10 w-full h-full object-cover p-[5px] sm:p-2 md:p-3"
                   />
                 </div>
@@ -120,9 +130,11 @@ const Gallery = () => {
             <X size={36} />
           </button>
 
-          <img
-            src={`/images/image-${filmImages[currentIndex]}.JPG`}
+          <Image
+            src={`${basePath}/images/image-${filmImages[currentIndex]}.JPG`}
             alt="Large view"
+            width={450}
+            height={250}
             className="relative z-20 max-w-[90%] max-h-[90%] rounded-xl shadow-lg animate-fadeIn"
           />
 

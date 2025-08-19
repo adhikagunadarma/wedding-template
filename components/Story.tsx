@@ -1,8 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+
 
 const Story = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <motion.section
       className="bg-gradient-to-b from-white via-[#fdfaf4] to-[#fefbf6] text-center px-6 pt-16"
@@ -17,15 +21,21 @@ const Story = () => {
     >
       <div className="flex flex-col items-center max-w-5xl mx-auto">
         {/* Image */}
-        <motion.img
-          src="/images/image-5.JPG"
-          alt="Our Story Decoration"
+        <motion.div
           className="w-full object-cover max-h-[500px] md:max-h-[600px] rounded-md"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
-        />
+        >
+          <Image
+            src={`${basePath}/images/image-5.JPG`}
+            alt="ur Story Decoration"
+            width={800} // set your actual width
+            height={400} // set your actual height
+          className="w-full object-cover max-h-[500px] md:max-h-[600px] rounded-md"
+          />
+          </motion.div>
 
         {/* "Our Once" */}
         <motion.h2
