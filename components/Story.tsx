@@ -68,9 +68,8 @@ const Story = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        It all began on a sunny afternoon when Axel and Alice crossed paths at a quaint coffee shop.
-        From shared laughter over latte art to twilight strolls in Jakarta’s old town, their bond grew stronger each day.
-        Now, they invite you to celebrate the next chapter of their fairy tale.
+        Once upon a quiet beginning in 2021, Lizzy met Arya—two souls brought together by fate and a shared workplace in  F&B World. What began as collaboration soon turned into companionship, as they worked side by side, lifting each other up. A year passed, and love began to stir—softly, sweetly—rooted in shared joys on concerts nights and warm bowls of mie Ayam. Their hearts found rhythm in laughter, comfort in presence, and delight in the little things. Now, with love that has grown deep and true, and under the gentle blessing of God, Lizzy and Arya step into forever. A promise sealed not just in vows, but in the quiet magic of a love story still unfolding.
+
       </motion.p>
 
       <div className="h-20 sm:h-24 md:h-32"></div>

@@ -47,7 +47,7 @@ const Gallery = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          Our Gallery
+          Our Love in Kodachrome
         </motion.h2>
 
         <motion.div
@@ -103,7 +103,7 @@ const Gallery = () => {
           ))}
 
           {/* Caption */}
-          <motion.div
+          {/* <motion.div
             className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -116,7 +116,7 @@ const Gallery = () => {
             <h2 className="text-black font-[cinzel] font-script text-6xl sm:text-7xl md:text-8xl leading-none mt-2 translate-x-4">
               The Air
             </h2>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
 

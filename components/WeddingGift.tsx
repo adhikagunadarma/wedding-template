@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
 const bankInfo = {
-  name: "Adhika Gunadarma",
-  account: "1234567890",
+  name: "Elizabeth Hestia",
+  account: "7310401425",
   bank: "BCA"
 }
 // info detail

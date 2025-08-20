@@ -8,7 +8,7 @@ const Couple = () => {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   return (
-    <section className="py-16 px-6 bg-white text-center">
+    <section className="py-16 px-6 bg-[#fefbf6] text-center">
       {/* 💍 Section Title: Fade in */}
       <motion.h2
         className="font-script text-5xl sm:text-6xl md:text-7xl text-[#44322a] mb-12"
@@ -52,9 +52,12 @@ const Couple = () => {
               objectFit="contain"
             />
           </div>
-          <h3 className="text-2xl mt-4 font-semibold">Elizabeth Hesia</h3>
+          <h3 className="text-2xl mt-4 font-semibold">Elizabeth Hestia</h3>
           <p className="text-sm uppercase tracking-wide text-gray-600 font-light">
             The Bride
+          </p>
+          <p className="text-sm uppercase tracking-wide text-gray-600 font-light">
+            Daughter of Marlen Sonya Tambunan & in loving memory of Heskiel Manginsela 
           </p>
         </motion.div>
 
@@ -75,9 +78,12 @@ const Couple = () => {
               objectFit="contain"
             />
           </div>
-          <h3 className="text-2xl mt-4 font-semibold">Arya</h3>
+          <h3 className="text-2xl mt-4 font-semibold">Reinaldhy Arya Prawira </h3>
           <p className="text-sm uppercase tracking-wide text-gray-600 font-light">
             The Groom
+          </p>
+          <p className="text-sm uppercase tracking-wide text-gray-600 font-light">
+            Son of Tan Henricus Indra Halim Setiawan & Fitri Maya Damayanti Krisno
           </p>
         </motion.div>
       </motion.div>

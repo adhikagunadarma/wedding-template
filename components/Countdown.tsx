@@ -47,6 +47,35 @@ const Countdown = () => {
 
   return (
     <section className="py-16 bg-[#fefbf6] text-center">
+
+      {/* 💬 Quote: fade + slide up on scroll */}
+      <motion.div
+        className="max-w-3xl mx-auto px-4 mb-10"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ delay: 0.1, duration: 0.8 }}
+      >
+        <p className="text-lg md:text-xl text-[#7e6c5f] font-light italic leading-relaxed">
+          "Love is patient, love is kind. It does not envy, it does not boast, it is not proud. 
+          It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. 
+          Love does not delight in evil but rejoices with the truth. 
+          It always protects, always trusts, always hopes, always perseveres. Love never fails." <br />
+          <span className="text-sm block mt-2">- 1 Corinthians 13:4-8</span>
+        </p>
+      </motion.div>
+
+      {/* 📢 Title: fade in */}
+      <motion.h2
+        className="text-3xl sm:text-4xl md:text-5xl font-[cinzel] text-[#44322a] mb-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ delay: 0.2, duration: 0.7 }}
+      >
+        Counting the Days
+      </motion.h2>
+
       {/* 🖼️ Fade + Zoom on scroll */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -62,34 +91,6 @@ const Countdown = () => {
           className="mx-auto mb-6"
         />
       </motion.div>
-
-      {/* 💬 Quote: fade + slide up on scroll */}
-      <motion.div
-        className="max-w-3xl mx-auto px-4 mb-10"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ delay: 0.1, duration: 0.8 }}
-      >
-        <p className="text-lg md:text-xl text-[#7e6c5f] font-light italic leading-relaxed">
-          "And among His signs is this: that He created for you mates from among
-          yourselves, that you may dwell in tranquility with them, and He has
-          put love and mercy between your hearts. Verily in that are signs for
-          those who reflect." <br />
-          <span className="text-sm block mt-2">— Qur'an 30:21</span>
-        </p>
-      </motion.div>
-
-      {/* 📢 Title: fade in */}
-      <motion.h2
-        className="text-3xl sm:text-4xl md:text-5xl font-[cinzel] text-[#44322a] mb-6"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ delay: 0.2, duration: 0.7 }}
-      >
-        Counting the Days
-      </motion.h2>
 
       {/* 📣 Subtext: fade + slide up */}
       <motion.p
