@@ -29,7 +29,7 @@ const Story = () => {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src={`${basePath}/images/image-5.JPG`}
+            src={`${basePath}/images/ouat.JPG`}
             alt="ur Story Decoration"
             width={800} // set your actual width
             height={400} // set your actual height
@@ -39,7 +39,7 @@ const Story = () => {
 
         {/* "Our Once" */}
         <motion.h2
-          className="text-[#44322a] font-script text-5xl sm:text-6xl md:text-7xl -mt-14 sm:-mt-20 md:-mt-24"
+          className="text-[#fefbf6] font-script text-5xl sm:text-6xl md:text-7xl -mt-14 sm:-mt-20 md:-mt-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

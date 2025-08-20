@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const TARGET_DATE = new Date("2026-06-01T15:00:00"); // <- defined outside
+const TARGET_DATE = new Date("2025-10-04T12:30:00"); // <- defined outside
 
 
 // image gif buat cincin sama tanggal nikah
@@ -60,7 +60,7 @@ const Countdown = () => {
           "Love is patient, love is kind. It does not envy, it does not boast, it is not proud. 
           It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. 
           Love does not delight in evil but rejoices with the truth. 
-          It always protects, always trusts, always hopes, always perseveres. Love never fails." <br />
+          It always protects, always trusts, always hopes, always perseveres. <b><i>Love never fails.</i></b>" <br />
           <span className="text-sm block mt-2">- 1 Corinthians 13:4-8</span>
         </p>
       </motion.div>
@@ -84,10 +84,10 @@ const Countdown = () => {
         transition={{ duration: 0.7 }}
       >
         <Image
-          src={`${basePath}/images/ring2.png`}
+          src={`${basePath}/images/header.png`}
           alt="Counting the Days Illustration"
-          width={300}
-          height={200}
+          width={450}
+          height={300}
           className="mx-auto mb-6"
         />
       </motion.div>

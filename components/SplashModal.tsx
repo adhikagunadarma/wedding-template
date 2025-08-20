@@ -55,13 +55,14 @@ const SplashModal = ({ guestName = "Guest" }: { guestName?: string }) => {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-script text-[#44322a] mb-6">
             Lizzy & Arya
           </h2>
-
-          <h3 className="text-4xl sm:text-5xl md:text-6xl font-script text-[#44322a] mb-6">
-            SAVE THE DATE 
+          <div className="h-6" /> {/* spacer with fixed height */}
+          <h3 className="text-sm sm:text-base md:text-lg font-light tracking-widest text-[#9f9389] uppercase mb-2">
+            SAVE THE DATE
           </h3>
-          <h3 className="text-4xl sm:text-5xl md:text-6xl font-script text-[#44322a] mb-6">
-            04.10.2025 
-          </h3>
+          <h4 className="text-xs sm:text-sm md:text-base font-light tracking-widest text-[#9f9389] uppercase mb-2">
+            04.10.2025
+          </h4>
+          <div className="h-6" /> {/* spacer with fixed height */}
           <p className="text-[#44322a] text-sm sm:text-base mb-4">
             Dear <span className="font-semibold">{guestName}</span>,
           </p>

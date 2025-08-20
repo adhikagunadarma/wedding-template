@@ -51,10 +51,10 @@ const EventDetails = () => {
         >
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
-              src={`${basePath}/images/church.png`}
+              src={`${basePath}/images/church.gif`}
               alt="Holy Matrimony"
               width={450}
-              height={250}
+              height={300}
               className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] w-full h-auto object-contain"
             />
           </div>
@@ -65,37 +65,36 @@ const EventDetails = () => {
           </div>
         </motion.div>
 
-        {/* Reception */}
-        {/* <motion.div
+        {/* Dress Code */}
+        <motion.div
           className="flex flex-col md:flex-row items-center gap-8 md:gap-16"
           variants={fadeUp}
           transition={{ duration: 0.8 }}
         >
           <div className="w-full md:w-1/2 order-2 md:order-1 text-center md:text-right flex flex-col justify-center items-center md:items-end">
-            <h3 className="text-2xl font-semibold text-[#44322a]">Reception</h3>
-            <p className="text-[#7a6c5d] font-light">12:30 PM, Sunday, 01 June 2025</p>
-            <p className="text-[#7a6c5d] font-light">Santo Laurensius Catholic Church, Alam Sutera</p>
+            <h3 className="text-2xl font-semibold text-[#44322a]">Dress Code</h3>
+            <p className="text-[#7a6c5d] font-light">Wear your best & comfy outfit</p>
           </div>
           <div className="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
             <Image
-              src={`${basePath}/images/party.png`}
-              alt="Reception"
+              src={`${basePath}/images/attire.gif`}
+              alt="Dress Code"
               width={450}
-              height={250}
+              height={300}
               className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] w-full h-auto object-contain"
             />
           </div>
-        </motion.div> */}
+        </motion.div>
 
         {/* Dress Code */}
-        <motion.div
+        {/* <motion.div
           className="flex flex-col md:flex-row items-center md:items-center gap-8 md:gap-16"
           variants={fadeUp}
           transition={{ duration: 0.8 }}
         >
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
-              src={`${basePath}/images/dinner.png`}
+              src={`${basePath}/images/attire.gif`}
               alt="Dress Code"
               width={450}
               height={250}
@@ -104,10 +103,9 @@ const EventDetails = () => {
           </div>
           <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center items-center md:items-start">
             <h3 className="text-2xl font-semibold text-[#44322a]">Dress Code</h3>
-            <p className="text-[#7a6c5d] font-light">Formal Attire</p>
-            <p className="text-[#7a6c5d] font-light">Black & White</p>
+            <p className="text-[#7a6c5d] font-light">Wear your best & comfy outfit</p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );
