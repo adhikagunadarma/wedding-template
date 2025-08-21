@@ -4,22 +4,24 @@ import { Copy } from "lucide-react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import Image from "next/image";
 
-const bankInfo = {
-  name: "Elizabeth Hestia",
-  account: "7310401425",
-  bank: "BCA"
-}
+
+const bankInfos = [
+  { name: "Elizabeth Hestia", account: "7310401425", bank: "BCA" },
+  { name: "Reinaldhy Arya Prawira", account: "3452633628", bank: "BCA" }
+]
 // info detail
 
 export default function WeddingGift() {
-  const [copied, setCopied] = useState(false)
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+    const [copied, setCopied] = useState<string | null>(null)
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(bankInfo.account)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
+    const handleCopy = (account: string) => {
+      navigator.clipboard.writeText(account)
+      setCopied(account) // this works now
+      setTimeout(() => setCopied(null), 2000)
+    }
 
   return (
     <motion.section
@@ -54,8 +56,9 @@ export default function WeddingGift() {
         Your presence is the most meaningful gift, but if you wish to bless us with a token of love, here's our bank information:
       </motion.p>
 
+      {bankInfos.map((bankInfo, i) => (
       <motion.div
-        className="inline-block bg-white p-6 rounded-2xl shadow-md text-left max-w-md mx-auto"
+        className="inline-block bg-white p-6 rounded-2xl shadow-md text-left w-80 h-40 mx-6 my-5"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
@@ -65,11 +68,33 @@ export default function WeddingGift() {
         <p className="font-semibold">Name: {bankInfo.name}</p>
         <div className="flex items-center gap-2 mt-2">
           <p className="font-semibold">Account: {bankInfo.account}</p>
-          <Button size="icon" variant="ghost" onClick={handleCopy}>
+          <Button size="icon" variant="ghost" onClick={() => handleCopy(bankInfo.account)}>
             <Copy className="w-4 h-4" />
           </Button>
-          {copied && <span className="text-green-600 text-sm">Copied!</span>}
+          {copied === bankInfo.account && <span className="text-green-600 text-sm">Copied!</span>}
         </div>
+      </motion.div>
+
+      ))}
+
+      {/* Big Image with Thank You */}
+      <motion.div
+        className="mt-12"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <Image
+          src={`${basePath}/images/party.png`}
+          alt="Thank you"
+          width={800} // set your actual width
+          height={400} // set your actual height
+          className="mx-auto rounded-2xl shadow-lg max-w-2xl w-full"
+        />
+        <p className="my-18 text-large sm:text-xl md:text-2xl font-light text-[#44322a]">
+          Thank you for your love & blessings
+        </p>
       </motion.div>
     </motion.section>
   )
