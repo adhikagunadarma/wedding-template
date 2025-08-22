@@ -29,7 +29,7 @@ const Story = () => {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src={`${basePath}/images/ouat.JPG`}
+            src={`${basePath}/images/ouat.jpg`}
             alt="ur Story Decoration"
             width={800} // set your actual width
             height={400} // set your actual height
