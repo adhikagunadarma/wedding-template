@@ -9,7 +9,7 @@ import Image from "next/image";
 const Gallery = () => {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-  const filmImages = [1, 2, 3, 4, 5, 6, 7, 8];
+  const filmImages = [1, 2, 3, 4, 5, 6];
   const leftColumn = filmImages.filter((_, idx) => idx % 2 === 0);
   const rightColumn = filmImages.filter((_, idx) => idx % 2 !== 0);
 
@@ -49,6 +49,60 @@ const Gallery = () => {
         >
           Our Love in Kodachrome
         </motion.h2>
+
+        <motion.div
+          className="relative flex justify-center gap-5"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          {/* Left Image + Caption */}
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Image
+              src={`${basePath}/images/Foto Bride sblm filmroll.png`}
+              alt="Love Left"
+              width={400}
+              height={500}
+              className="rounded-2xl shadow-lg object-cover"
+            />
+          </motion.div>
+
+          {/* Right Image + Caption */}
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Image
+              src={`${basePath}/images/Foto Groom sblm filmroll.png`}
+              alt="Love Right"
+              width={400}
+              height={500}
+              className="rounded-2xl shadow-lg object-cover"
+            />
+
+          </motion.div>
+        </motion.div>
+
+        <motion.h2
+          className="text-sm sm:text-xl md:text-2xl font-light text-[#44322a] my-5 mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+              "I am beloved's and my beloved is mine" - Solomon 6:3
+        </motion.h2>
+
 
         <motion.div
           className="relative flex justify-center gap-12"
@@ -91,7 +145,7 @@ const Gallery = () => {
 
                   {/* Actual photo */}
                   <Image
-                    src={`${basePath}/images/image-${i}.JPG`}
+                    src={`${basePath}/images/Photo Strip ${i}.jpg`}
                     alt={`Image ${i}`}
                     width={450}
                     height={250}
@@ -131,7 +185,7 @@ const Gallery = () => {
           </button>
 
           <Image
-            src={`${basePath}/images/image-${filmImages[currentIndex]}.JPG`}
+            src={`${basePath}/images/Photo Strip ${filmImages[currentIndex]}.jpg`}
             alt="Large view"
             width={450}
             height={250}

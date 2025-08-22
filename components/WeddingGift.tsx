@@ -90,7 +90,7 @@ export default function WeddingGift() {
           alt="Thank you"
           width={800} // set your actual width
           height={400} // set your actual height
-          className="mx-auto rounded-2xl shadow-lg max-w-2xl w-full"
+          className="mx-auto rounded-2xl max-w-2xl w-full"
         />
         <p className="my-18 text-large sm:text-xl md:text-2xl font-light text-[#44322a]">
           Thank you for your love & blessings
