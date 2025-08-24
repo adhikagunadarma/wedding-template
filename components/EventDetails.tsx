@@ -17,7 +17,9 @@ const EventDetails = () => {
   return (
     <section
       className="pt-24 pb-16 bg-white text-center px-6 bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/paper.png')" }}
+      style={{ backgroundImage: "url('wedding-template/images/paper.png')" }}
+      // style={{ backgroundImage: "url('/images/paper.png')" }}
+
     >
       <motion.h2
         className="font-script text-5xl sm:text-6xl md:text-7xl text-[#44322a] mb-12"
