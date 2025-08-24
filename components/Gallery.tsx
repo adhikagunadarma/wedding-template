@@ -70,7 +70,8 @@ const Gallery = () => {
               alt="Love Left"
               width={400}
               height={500}
-              className="rounded-2xl shadow-lg object-cover"
+              priority // forces preload
+              className="rounded-2xl object-cover"
             />
           </motion.div>
 
@@ -87,7 +88,8 @@ const Gallery = () => {
               alt="Love Right"
               width={400}
               height={500}
-              className="rounded-2xl shadow-lg object-cover"
+              priority // forces preload
+              className="rounded-2xl object-cover"
             />
 
           </motion.div>
@@ -100,12 +102,12 @@ const Gallery = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-              "I am beloved's and my beloved is mine" - Solomon 6:3
+              <i>"I am beloved's and my beloved is mine" </i> - Solomon 6:3
         </motion.h2>
 
 
         <motion.div
-          className="relative flex justify-center gap-12"
+          className="relative flex justify-center gap-x-2 sm:gap-x-4 md:gap-x-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -140,6 +142,7 @@ const Gallery = () => {
                   alt="filmroll"
                   width={450}
                   height={250}
+                  priority // forces preload
                   className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
                   />
 
@@ -149,28 +152,13 @@ const Gallery = () => {
                     alt={`Image ${i}`}
                     width={450}
                     height={250}
+                    priority // forces preload
                     className="relative z-10 w-full h-full object-cover p-[5px] sm:p-2 md:p-3"
                   />
                 </div>
               ))}
             </motion.div>
           ))}
-
-          {/* Caption */}
-          {/* <motion.div
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <h2 className="text-black font-[cinzel] font-script text-6xl sm:text-7xl md:text-8xl leading-none">
-              Love is in
-            </h2>
-            <h2 className="text-black font-[cinzel] font-script text-6xl sm:text-7xl md:text-8xl leading-none mt-2 translate-x-4">
-              The Air
-            </h2>
-          </motion.div> */}
         </motion.div>
       </div>
 

@@ -48,6 +48,22 @@ const Countdown = () => {
   return (
     <section className="py-16 bg-[#fefbf6] text-center">
 
+            {/* 🖼️ Fade + Zoom on scroll */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7 }}
+      >
+        <Image
+          src={`${basePath}/images/header.png`}
+          alt="Counting the Days Illustration"
+          width={450}
+          height={300}
+          className="mx-auto mb-6"
+        />
+      </motion.div>
+
       {/* 💬 Quote: fade + slide up on scroll */}
       <motion.div
         className="max-w-3xl mx-auto px-4 mb-10"
@@ -56,13 +72,14 @@ const Countdown = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ delay: 0.1, duration: 0.8 }}
       >
-        <p className="text-lg md:text-xl text-[#7e6c5f] font-light italic leading-relaxed">
+        <p className="text-lg md:text-xl text-[#7e6c5f] italic font-light leading-relaxed">
           "Love is patient, love is kind. It does not envy, it does not boast, it is not proud. 
           It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. 
           Love does not delight in evil but rejoices with the truth. 
-          It always protects, always trusts, always hopes, always perseveres. <b><i>Love never fails.</i></b>" <br />
-          <span className="text-sm block mt-2">- 1 Corinthians 13:4-8</span>
+          It always protects, always trusts, always hopes, always perseveres. <span className="text-xl md:text-2xl "><b>Love never fails.</b></span>" <br />
+        
         </p>
+          <span className="text-sm block mt-2 text-[#7e6c5f] font-light leading-relaxed">- 1 Corinthians 13:4-8</span>
       </motion.div>
 
       {/* 📢 Title: fade in */}
@@ -84,7 +101,7 @@ const Countdown = () => {
         transition={{ duration: 0.7 }}
       >
         <Image
-          src={`${basePath}/images/header.png`}
+          src={`${basePath}/images/ring 2.png`}
           alt="Counting the Days Illustration"
           width={450}
           height={300}

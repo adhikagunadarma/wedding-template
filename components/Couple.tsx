@@ -57,7 +57,7 @@ const Couple = () => {
             The Bride
           </p>
           <p className="text-xs tracking-tight text-gray-500 font-light leading-tight">
-            Daughter of Marlen Sonya Tambunan and in loving memory of Heskiel Manginsela 
+            Daughter of Marlen Sonya Tambunan <br/>and in loving memory of Heskiel Manginsela 
           </p>
         </motion.div>
 
@@ -83,7 +83,7 @@ const Couple = () => {
             The Groom
           </p>
           <p className="text-xs tracking-tight text-gray-500 font-light leading-tight">
-            Son of Tan Henricus Indra Halim Setiawan and Fitri Maya Damayanti Krisno
+            Son of Tan Henricus Indra Halim Setiawan<br/> and Fitri Maya Damayanti Krisno
           </p>
         </motion.div>
       </motion.div>

@@ -3,9 +3,12 @@
 import { useState, useRef, useEffect } from "react";
 import { Music, Music2 } from "lucide-react";
 
+
 const AudioPlayer = () => {
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 
 const togglePlay = () => {
   const audio = audioRef.current;
@@ -49,7 +52,7 @@ const togglePlay = () => {
         )}
       </button>
       <audio ref={audioRef} loop>
-        <source src="/audio/wedding.mp3" type="audio/mp3" />
+        <source src={`${basePath}/audio/wedding-song.mp3`} type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
     </>

@@ -71,11 +71,21 @@ export default function WeddingGift() {
           <Button size="icon" variant="ghost" onClick={() => handleCopy(bankInfo.account)}>
             <Copy className="w-4 h-4" />
           </Button>
-          {copied === bankInfo.account && <span className="text-green-600 text-sm">Copied!</span>}
+          {copied === bankInfo.account && <span className="text-green-500 text-xs">Copied!</span>}
         </div>
       </motion.div>
 
       ))}
+
+      <motion.h2
+        className="font-script text-5xl sm:text-6xl md:text-7xl text-[#44322a] mb-12 my-20"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        Thank you
+      </motion.h2>
 
       {/* Big Image with Thank You */}
       <motion.div
@@ -93,7 +103,7 @@ export default function WeddingGift() {
           className="mx-auto rounded-2xl max-w-2xl w-full"
         />
         <p className="my-18 text-large sm:text-xl md:text-2xl font-light text-[#44322a]">
-          Thank you for your love & blessings
+          We opened our hearts to each other—and you opened yours to us. Thank you for witnessing our love and blessing our beginning.
         </p>
       </motion.div>
     </motion.section>
