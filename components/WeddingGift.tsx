@@ -106,6 +106,17 @@ export default function WeddingGift() {
           We opened our hearts to each other—and you opened yours to us. Thank you for witnessing our love and blessing our beginning.
         </p>
       </motion.div>
+
+
+      <motion.h2
+        className="font-script text-5xl sm:text-6xl md:text-7xl text-[#44322a] mb-12 my-20"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+       See you
+      </motion.h2>
     </motion.section>
   )
 }

@@ -3,40 +3,42 @@
 import { useState, useRef, useEffect } from "react";
 import { Music, Music2 } from "lucide-react";
 
-
 const AudioPlayer = () => {
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-
-const togglePlay = () => {
-  const audio = audioRef.current;
-  if (!audio) return;
-
-  if (audio.paused) {
-    audio.play().catch((e) => {
-      console.warn("Autoplay blocked:", e);
-    });
-  } else {
-    audio.pause();
-  }
-
-  setPlaying((prev) => !prev); // ✅ fix here
-};
-
-
+  // Try autoplay muted on mount
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
+      audio.muted = true; // force muted
       audio
         .play()
-        .then(() => setPlaying(true))
-        .catch((err) => {
-          console.warn("Autoplay failed (likely due to browser policy):", err);
+        .then(() => {
+          console.log("Muted autoplay started");
+        })
+        .catch(err => {
+          console.warn("Muted autoplay blocked:", err);
         });
     }
   }, []);
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (audio.paused) {
+      audio.muted = false; // unmute on user action
+      audio
+        .play()
+        .then(() => setPlaying(true))
+        .catch(err => console.warn("Play failed:", err));
+    } else {
+      audio.pause();
+      setPlaying(false);
+    }
+  };
 
   return (
     <>
@@ -51,7 +53,7 @@ const togglePlay = () => {
           <Music className="text-gray-400" />
         )}
       </button>
-      <audio ref={audioRef} loop>
+      <audio ref={audioRef} loop preload="auto">
         <source src={`${basePath}/audio/wedding-song.mp3`} type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>

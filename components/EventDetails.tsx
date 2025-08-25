@@ -62,8 +62,8 @@ const EventDetails = () => {
           </div>
           <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center items-center md:items-start">
             <h3 className="text-2xl font-semibold text-[#44322a]">Holy Matrimony</h3>
-            <p className="text-[#7a6c5d] font-light">12:30 PM</p>
-            <p className="text-[#7a6c5d] font-light">Santo Laurensius Catholic Church, Alam Sutera</p>
+            <p className="text-[#7a6c5d] font-light">4 October 2025, 12.30 PM</p>
+            <p className="text-[#7a6c5d] font-light">Santo Laurensius Catholic Church<br />Alam Sutera</p>
           </div>
         </motion.div>
 

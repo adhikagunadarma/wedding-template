@@ -72,12 +72,12 @@ const Countdown = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ delay: 0.1, duration: 0.8 }}
       >
-        <p className="text-lg md:text-xl text-[#7e6c5f] italic font-light leading-relaxed">
+        <p className="text-sm md:textlg text-[#7e6c5f] italic font-light leading-relaxed">
           "Love is patient, love is kind. It does not envy, it does not boast, it is not proud. 
           It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. 
           Love does not delight in evil but rejoices with the truth. 
-          It always protects, always trusts, always hopes, always perseveres. <span className="text-xl md:text-2xl "><b>Love never fails.</b></span>" <br />
-        
+          It always protects, always trusts, always hopes, always perseveres. <span className="text-lg md:text-xl "><b>Love never fails.</b></span>" <br />
+
         </p>
           <span className="text-sm block mt-2 text-[#7e6c5f] font-light leading-relaxed">- 1 Corinthians 13:4-8</span>
       </motion.div>
@@ -117,7 +117,7 @@ const Countdown = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ delay: 0.3, duration: 0.7 }}
       >
-        Until we say "I do"
+        Until we say &nbsp; <span className="text-xl md:text-2xl ">"I do"</span>
       </motion.p>
 
       {/* ⏱️ Countdown: staggered fade + slide up */}

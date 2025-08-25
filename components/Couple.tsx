@@ -53,11 +53,11 @@ const Couple = () => {
             />
           </div>
           <h3 className="text-xl mt-4 font-semibold">Elizabeth Hestia</h3>
-          <p className="text-sm uppercase tracking-wide text-gray-600 font-light">
+          <p className="text-sm uppercase tracking-wide text-gray-600 font-semibold ">
             The Bride
           </p>
-          <p className="text-xs tracking-tight text-gray-500 font-light leading-tight">
-            Daughter of Marlen Sonya Tambunan <br/>and in loving memory of Heskiel Manginsela 
+          <p className="text-md tracking-tight text-gray-500 font-light leading-tight">
+            Daughter of Marlen Sonya Tambunan <br/>and (†) Heskiel Manginsela
           </p>
         </motion.div>
 
@@ -79,10 +79,10 @@ const Couple = () => {
             />
           </div>
           <h3 className="text-xl mt-4 font-semibold">Reinaldhy Arya Prawira </h3>
-          <p className="text-sm uppercase tracking-wide text-gray-600 font-light">
+          <p className="text-sm uppercase tracking-wide text-gray-600 font-semibold ">
             The Groom
           </p>
-          <p className="text-xs tracking-tight text-gray-500 font-light leading-tight">
+          <p className="text-md tracking-tight text-gray-500 font-light leading-tight">
             Son of Tan Henricus Indra Halim Setiawan<br/> and Fitri Maya Damayanti Krisno
           </p>
         </motion.div>
