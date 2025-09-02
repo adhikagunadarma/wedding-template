@@ -9,7 +9,7 @@ import Image from "next/image";
 const Gallery = () => {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-  const filmImages = [1, 2, 3, 4, 5, 6];
+  const filmImages = [1, 2, 3, 4, 5, 6, 7 , 8];
   const leftColumn = filmImages.filter((_, idx) => idx % 2 === 0);
   const rightColumn = filmImages.filter((_, idx) => idx % 2 !== 0);
 
