@@ -21,14 +21,14 @@ jobs:
           DEPLOY_TARGET=gh-pages npm run build
           cp out/index.html out/404.html
         env:
-          # NEXT_PUBLIC_BASE_PATH: /wedding-template
+          NEXT_PUBLIC_BASE_PATH: /wedding-invitation
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
-        with:
+        with: 
           personal_token: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
-          external_repository: adhikagunadarma/wedding-template
+          external_repository: adhikagunadarma/wedding-template # repo name not 
           publish_branch: gh-pages
           publish_dir: ./out
