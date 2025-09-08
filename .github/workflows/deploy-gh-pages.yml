@@ -11,7 +11,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
@@ -20,15 +25,16 @@ jobs:
         run: |
           DEPLOY_TARGET=gh-pages npm run build
           cp out/index.html out/404.html
+          echo "lizzyarya2025.id" > out/CNAME
+          touch out/.nojekyll
         env:
-          NEXT_PUBLIC_BASE_PATH: /wedding-invitation
+          NEXT_PUBLIC_BASE_PATH: 
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
-        with: 
+        with:
           personal_token: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
-          external_repository: adhikagunadarma/wedding-template # repo name not 
           publish_branch: gh-pages
           publish_dir: ./out
